@@ -53,6 +53,11 @@
 
                 </Grid>
             </StackLayout>
+            <StackLayout  VerticalOptions="Center">
+                <Label FontSize="Large" x:Name="LableName" Text="Appple" HorizontalOptions="Center" IsVisible="False">
+
+                </Label>
+            </StackLayout>
             <StackLayout  Orientation="Horizontal" x:Name="imagecounter" HorizontalOptions="Center" IsVisible="False">
 
                 <Label x:Name="l1" HorizontalTextAlignment="Center"  Text="1"  FontSize="Small" FontAttributes="Bold" BackgroundColor="Green" TextColor="White"></Label>

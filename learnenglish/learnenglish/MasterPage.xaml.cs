@@ -44,10 +44,22 @@ namespace learnenglish
 
                 if (ImageSelected == Truce[countertrue] + ".jpg")
                 {
-                    PlayAudioFromUri();
+                    MediaPlayer player = new MediaPlayer();
+                    player.Completion += delegate
+                    {
+                        player.Release();
+                        player.Dispose();
+                    };
                     if (countertrue < 11)
                     {
-                        PlayAudioFromUri();
+                        LableName.Text = Truce[countertrue+1].ToString();
+
+
+                        player.SetAudioStreamType(Stream.Music);
+                        player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", Truce[countertrue + 1]));
+                        player.Prepare();
+                     
+                        player.Start();
                     }
                     switch (countertrue)
                     {
@@ -156,7 +168,19 @@ namespace learnenglish
                     MyMp3Player audioplayer = new MyMp3Player();
                     audioplayer.AudioPlayer("false.mp3");
 
-                    PlayAudioFromUri();
+                    MediaPlayer player = new MediaPlayer();
+                    player.Completion += delegate
+                    {
+                        player.Release();
+                        player.Dispose();
+                    };
+
+
+
+                    player.SetAudioStreamType(Stream.Music);
+                    player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", Truce[countertrue]));
+                    player.Prepare();
+                    player.Start();
 
 
                 }
@@ -180,7 +204,17 @@ namespace learnenglish
         //}
         async void OnRepeatButtonClicked(object sender, EventArgs args)
         {
-            PlayAudioFromUri();
+            MediaPlayer player = new MediaPlayer();
+            player.Completion += delegate
+            {
+                player.Release();
+                player.Dispose();
+            };
+
+            player.SetAudioStreamType(Stream.Music);
+            player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", alpha[counter]));
+            player.Prepare();
+            player.Start();
 
         }
         [Obsolete]
@@ -191,18 +225,31 @@ namespace learnenglish
 
             if (counter == 12)
             {
+                LableName.Text = Truce[countertrue];
                 counter = 0;
                 ImgSource.IsVisible = false;
                 KeyLayout.IsVisible = false;
                 imagecounter.IsVisible = false;
                 ExamLayout.IsVisible = true;
-               // await Navigation.PushModalAsync(new Exam());
+                MediaPlayer player = new MediaPlayer();
+                player.Completion += delegate
+                {
+                    player.Release();
+                    player.Dispose();
+                };
+
+                player.SetAudioStreamType(Stream.Music);
+                player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", alpha[counter]));
+                player.Prepare();
+                player.Start();
+                // await Navigation.PushModalAsync(new Exam());
             }
             else
             {
 
 
                 ImgSource.Source = ImageSource.FromUri(new Uri(string.Format(baseurl + "/images/eatable/{0}.jpg", alpha[counter])));
+                LableName.Text = alpha[counter].ToString();
                 switch (counter)
                 {
                     
@@ -261,7 +308,17 @@ namespace learnenglish
 
                         break;
                 }
-                PlayAudioFromUri();
+                MediaPlayer player = new MediaPlayer();
+                player.Completion += delegate
+                {
+                    player.Release();
+                    player.Dispose();
+                };
+
+                player.SetAudioStreamType(Stream.Music);
+                player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", alpha[counter]));
+                player.Prepare();
+                player.Start();
 
             }
            
@@ -276,10 +333,7 @@ namespace learnenglish
             ImgSource.IsVisible = true;
             KeyLayout.IsVisible = true;
             imagecounter.IsVisible = true;
-            PlayAudioFromUri();
-        }
-        void PlayAudioFromUri() {
-
+            LableName.IsVisible = true;
             MediaPlayer player = new MediaPlayer();
             player.Completion += delegate
             {
@@ -293,24 +347,7 @@ namespace learnenglish
             player.Start();
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
 
     }
