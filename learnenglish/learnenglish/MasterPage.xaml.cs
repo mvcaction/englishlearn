@@ -44,20 +44,10 @@ namespace learnenglish
 
                 if (ImageSelected == Truce[countertrue] + ".jpg")
                 {
-                    MediaPlayer player = new MediaPlayer();
-                    player.Completion += delegate
-                    {
-                        player.Release();
-                        player.Dispose();
-                    };
+                    PlayAudioFromUri();
                     if (countertrue < 11)
                     {
-
-                        player.SetAudioStreamType(Stream.Music);
-                        player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", Truce[countertrue + 1]));
-                        player.Prepare();
-                     
-                        player.Start();
+                        PlayAudioFromUri();
                     }
                     switch (countertrue)
                     {
@@ -166,19 +156,7 @@ namespace learnenglish
                     MyMp3Player audioplayer = new MyMp3Player();
                     audioplayer.AudioPlayer("false.mp3");
 
-                    MediaPlayer player = new MediaPlayer();
-                    player.Completion += delegate
-                    {
-                        player.Release();
-                        player.Dispose();
-                    };
-
-
-
-                    player.SetAudioStreamType(Stream.Music);
-                    player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", Truce[countertrue]));
-                    player.Prepare();
-                    player.Start();
+                    PlayAudioFromUri();
 
 
                 }
@@ -197,22 +175,12 @@ namespace learnenglish
         //async void OnChangePreviousPictureButtonClicked(object sender, EventArgs args)
         //{
         //    counter--;
-        //    ImgSource.Source = ImageSource.FromUri(new Uri(string.Format("http://b6b747d6.ngrok.io/images/eatable/{0}.jpg", alpha[counter])));
+        //    ImgSource.Source = ImageSource.FromUri(new Uri(string.Format("http://0020d29b.ngrok.io/images/eatable/apple.jpg", alpha[counter])));
 
         //}
         async void OnRepeatButtonClicked(object sender, EventArgs args)
         {
-            MediaPlayer player = new MediaPlayer();
-            player.Completion += delegate
-            {
-                player.Release();
-                player.Dispose();
-            };
-
-            player.SetAudioStreamType(Stream.Music);
-            player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", alpha[counter]));
-            player.Prepare();
-            player.Start();
+            PlayAudioFromUri();
 
         }
         [Obsolete]
@@ -293,17 +261,7 @@ namespace learnenglish
 
                         break;
                 }
-                MediaPlayer player = new MediaPlayer();
-                player.Completion += delegate
-                {
-                    player.Release();
-                    player.Dispose();
-                };
-
-                player.SetAudioStreamType(Stream.Music);
-                player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", alpha[counter]));
-                player.Prepare();
-                player.Start();
+                PlayAudioFromUri();
 
             }
            
@@ -318,8 +276,41 @@ namespace learnenglish
             ImgSource.IsVisible = true;
             KeyLayout.IsVisible = true;
             imagecounter.IsVisible = true;
+            PlayAudioFromUri();
+        }
+        void PlayAudioFromUri() {
+
+            MediaPlayer player = new MediaPlayer();
+            player.Completion += delegate
+            {
+                player.Release();
+                player.Dispose();
+            };
+
+            player.SetAudioStreamType(Stream.Music);
+            player.SetDataSource(string.Format(baseurl + "/images/eatable/{0}.mp3", alpha[counter]));
+            player.Prepare();
+            player.Start();
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }

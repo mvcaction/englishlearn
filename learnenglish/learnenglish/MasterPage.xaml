@@ -10,7 +10,7 @@
                    HorizontalOptions="FillAndExpand"
                     IsVisible="False"
                    x:Name="ImgSource"
-                   Source="http://b6b747d6.ngrok.io/images/eatable/apple.jpg">
+                   Source="http://0020d29b.ngrok.io/images/eatable/apple.jpg">
                 
             </Image>
             <StackLayout x:Name="Selector" VerticalOptions="Center">
@@ -55,18 +55,18 @@
             </StackLayout>
             <StackLayout  Orientation="Horizontal" x:Name="imagecounter" HorizontalOptions="Center" IsVisible="False">
 
-                <Label x:Name="l1" HorizontalTextAlignment="Center"  Text="1" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold" BackgroundColor="Green" TextColor="White"></Label>
-                <Label x:Name="l2" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold" Text="2"></Label>
-                <Label x:Name="l3" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold" Text="3"></Label>
-                <Label x:Name="l4" HorizontalTextAlignment="Center"  FontSize="Small" HeightRequest="20" WidthRequest="20" FontAttributes="Bold" Text="4"></Label>
-                <Label x:Name="l5" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="5"></Label>
-                <Label x:Name="l6" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="6"></Label>
-                <Label x:Name="l7" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="7"></Label>
-                <Label x:Name="l8" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="8"></Label>
-                <Label x:Name="l9" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="9"></Label>
-                <Label x:Name="l10" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="10"></Label>
-                <Label x:Name="l11"  HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="11"></Label>
-                <Label x:Name="l12" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="12"></Label>
+                <Label x:Name="l1" HorizontalTextAlignment="Center"  Text="1"  FontSize="Small" FontAttributes="Bold" BackgroundColor="Green" TextColor="White"></Label>
+                <Label x:Name="l2" HorizontalTextAlignment="Center"  FontSize="Small" FontAttributes="Bold" Text="2"></Label>
+                <Label x:Name="l3" HorizontalTextAlignment="Center"  FontSize="Small" FontAttributes="Bold" Text="3"></Label>
+                <Label x:Name="l4" HorizontalTextAlignment="Center"  FontSize="Small" FontAttributes="Bold" Text="4"></Label>
+                <Label x:Name="l5" HorizontalTextAlignment="Center"  FontSize="Small" FontAttributes="Bold"  Text="5"></Label>
+                <Label x:Name="l6" HorizontalTextAlignment="Center"  FontSize="Small" FontAttributes="Bold"  Text="6"></Label>
+                <Label x:Name="l7" HorizontalTextAlignment="Center"  FontSize="Small" FontAttributes="Bold"  Text="7"></Label>
+                <Label x:Name="l8" HorizontalTextAlignment="Center"  FontSize="Small" FontAttributes="Bold"  Text="8"></Label>
+                <Label x:Name="l9" HorizontalTextAlignment="Center"  FontSize="Small" FontAttributes="Bold"  Text="9"></Label>
+                <Label x:Name="l10" HorizontalTextAlignment="Center" FontSize="Small" FontAttributes="Bold"  Text="10"></Label>
+                <Label x:Name="l11" HorizontalTextAlignment="Center" FontSize="Small" FontAttributes="Bold"  Text="11"></Label>
+                <Label x:Name="l12" HorizontalTextAlignment="Center" FontSize="Small" FontAttributes="Bold"  Text="12"></Label>
             </StackLayout>
             <StackLayout x:Name="KeyLayout" Orientation="Horizontal" HorizontalOptions="Center" IsVisible="False">
 
