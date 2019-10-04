@@ -2,19 +2,104 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="learnenglish.MasterPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Image VerticalOptions="Center" 
+
+        <ContentPage.Content>
+        
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+            <Image VerticalOptions="FillAndExpand" 
                    HorizontalOptions="FillAndExpand"
-                   HeightRequest="300"
-                   
+                    IsVisible="False"
                    x:Name="ImgSource"
-                   Source="A.jpg">
+                   Source="http://b6b747d6.ngrok.io/images/eatable/apple.jpg">
                 
             </Image>
-            <Button Text="Change" Clicked="OnChangePictureButtonClicked">
-                
-            </Button>
+            <StackLayout x:Name="Selector" VerticalOptions="Center">
+                <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Button Clicked="OnButton1Clicked"  Text = "1" Grid.Row="1" Grid.Column="0" BorderRadius="50"
+      />
+                    <Button Text = "2" Grid.Row="1" Grid.Column="1" BorderRadius="50"
+    />
+                    <Button Text = "3" Grid.Row="1" Grid.Column="2" BorderRadius="50"
+    />
+                    <Button Text = "4" Grid.Row="2" Grid.Column="0" BorderRadius="50"
+      />
+                    <Button Text = "5" Grid.Row="2" Grid.Column="1" BorderRadius="50"
+      />
+                    <Button Text = "6" Grid.Row="2" Grid.Column="2" BorderRadius="50"
+       />
+                    <Button Text = "7" Grid.Row="3" Grid.Column="0" BorderRadius="50"
+   />
+                    <Button Text = "8" Grid.Row="3" Grid.Column="1" BorderRadius="50"
+     />
+                    <Button Text = "9" Grid.Row="3" Grid.Column="2" BorderRadius="50"
+      />
+                    <Button Text = "10" Grid.Row="4" Grid.Column="1" BorderRadius="50"
+ />
+
+                </Grid>
+            </StackLayout>
+            <StackLayout  Orientation="Horizontal" x:Name="imagecounter" HorizontalOptions="Center" IsVisible="False">
+
+                <Label x:Name="l1" HorizontalTextAlignment="Center"  Text="1" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold" BackgroundColor="Green" TextColor="White"></Label>
+                <Label x:Name="l2" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold" Text="2"></Label>
+                <Label x:Name="l3" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold" Text="3"></Label>
+                <Label x:Name="l4" HorizontalTextAlignment="Center"  FontSize="Small" HeightRequest="20" WidthRequest="20" FontAttributes="Bold" Text="4"></Label>
+                <Label x:Name="l5" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="5"></Label>
+                <Label x:Name="l6" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="6"></Label>
+                <Label x:Name="l7" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="7"></Label>
+                <Label x:Name="l8" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="8"></Label>
+                <Label x:Name="l9" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="9"></Label>
+                <Label x:Name="l10" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="10"></Label>
+                <Label x:Name="l11"  HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="11"></Label>
+                <Label x:Name="l12" HorizontalTextAlignment="Center" HeightRequest="20" WidthRequest="20" FontSize="Small" FontAttributes="Bold"  Text="12"></Label>
+            </StackLayout>
+            <StackLayout x:Name="KeyLayout" Orientation="Horizontal" HorizontalOptions="Center" IsVisible="False">
+
+                <Button Text="rep" Clicked="OnRepeatButtonClicked">
+
+                </Button>
+                <Button Text="next" Clicked="OnChangeNextPictureButtonClicked">
+
+                </Button>
+            </StackLayout>
+            <StackLayout x:Name="ExamLayout" IsVisible="False">
+                <Grid x:Name="ExamGrid"  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image VerticalOptions="FillAndExpand" 
+                   HorizontalOptions="FillAndExpand"  x:Name="ImgBtnOne"    Grid.Row="0" Grid.Column="0"></Image>
+                    <Image VerticalOptions="FillAndExpand" 
+                   HorizontalOptions="FillAndExpand"  x:Name="ImgBtnTwo"   Grid.Row="0" Grid.Column="1"></Image>
+                    <Image VerticalOptions="FillAndExpand" 
+                   HorizontalOptions="FillAndExpand" x:Name="ImgBtnThree"   Grid.Row="1" Grid.Column="0"  ></Image>
+                    <Image VerticalOptions="FillAndExpand" 
+                   HorizontalOptions="FillAndExpand"  x:Name="ImgBtnFour"  Grid.Row="1" Grid.Column="1"  ></Image>
+
+                </Grid>
+            </StackLayout>
+
         </StackLayout>
+       
     </ContentPage.Content>
 </ContentPage>

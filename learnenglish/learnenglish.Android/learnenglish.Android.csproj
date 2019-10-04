@@ -116,19 +116,34 @@
     <AndroidAsset Include="Assets\a.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\A.jpg" />
+    <AndroidResource Include="Resources\drawable\A1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\B.jpg" />
+    <AndroidResource Include="Resources\drawable\A2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\C.png" />
+    <AndroidResource Include="Resources\drawable\A3.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\D.jpg" />
+    <AndroidResource Include="Resources\drawable\A4.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\E.jpg" />
+    <AndroidResource Include="Resources\drawable\A5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\correct.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\false.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\A6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\A7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\A8.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
